@@ -11,31 +11,19 @@ public final class Cabby {
 
     private static final Logger logger = LoggerFactory.getLogger(Cabby.class);
 
-    private Cloud from;
+    private final Cloud from;
 
-    private Cloud to;
+    private final Cloud to;
 
-    private boolean isNeedDeleteFile;
+    private final boolean isNeedDeleteFile;
 
-    private AtomicLong processedFilesCount;
+    private final AtomicLong processedFilesCount;
 
     public Cabby(Cloud from, Cloud to, boolean isNeedDeleteFile) {
         this.from = from;
         this.to = to;
         this.isNeedDeleteFile = isNeedDeleteFile;
         this.processedFilesCount = new AtomicLong();
-    }
-
-    public void setFrom(Cloud from) {
-        this.from = from;
-    }
-
-    public void setTo(Cloud to) {
-        this.to = to;
-    }
-
-    public void setNeedDeleteFile(boolean needDeleteFile) {
-        this.isNeedDeleteFile = needDeleteFile;
     }
 
     public void carryAllThings() throws IOException {
