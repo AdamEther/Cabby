@@ -12,6 +12,14 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <repositories>
+        <!-- easy to use package repository for github -->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <plugin>
@@ -53,31 +61,25 @@
     </build>
 
     <dependencies>
+        <!-- smart config util -->
         <dependency>
             <groupId>org.aeonbits.owner</groupId>
             <artifactId>owner</artifactId>
             <version>1.0.8</version>
         </dependency>
+        <!-- flickr api-->
         <dependency>
             <groupId>com.flickr4java</groupId>
             <artifactId>flickr4java</artifactId>
             <version>2.12</version>
         </dependency>
+        <!-- onedrive api fork from github -->
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>1.1.2</version>
+            <groupId>com.github.AdamEther</groupId>
+            <artifactId>OneDriveAPI</artifactId>
+            <version>414be53015</version>
         </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.7</version>
-        </dependency>
+        <!-- test tools -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
